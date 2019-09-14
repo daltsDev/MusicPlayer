@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+:root {
+    --main-bg-color: #1A1A1A;
+    --main-font-color: white;
+    --secondary-font-color: #AAAAAA;
+    --light-white: #EEEEEE;
+    --light-green: #33B75C;
+    --container-width: #768px;
+    --main-font-stack: Quicksand, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+body {
+    font-family: var(--main-font-stack);
+    line-height: 1.5;
+}
+.button {
+    padding: 1rem 3.8rem;
+    border-radius: 3.4rem;
+    text-transform: uppercase;
+    border: 0;
+    outline: 0;
+    opacity: .9;
+    transition: 0.1s all ease;
+    font-size: 0.9rem;
+}
+.button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.button.is-green {
+    background: var(--light-green);
+    color: var(--main-font-color);
+}
+.app {
+    background: linear-gradient(to bottom, #7d182f, #100206);
+    height: 100%;
+}
+/* trackbar style */
+.track-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    transition: 0.1s all ease;
+}
+.track-bar-fill {
+    height: 6px;
+    width: 0%;
+    background-color: var(--light-green);
+}
+/* player styles */
+
+.player {
+    display: flex;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .player {
+        display: block;
+    }
+}
+
+.player-header {
+    flex: 1;
+    padding: 1.4rem;
+}
+.player-img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.player-details {
+    text-align: center;
+}
+.player-name {
+    margin-top: 3rem;
+    color: var(--main-font-color);
+}
+.player-count-wrapper {
+    color: var(--secondary-font-color);
+    text-transform: uppercase;
+}
+
+.player-trigger {
+    margin: 1.4rem 0;
+}
+/* player body */
+
+.player-body {
+    flex: 2;
+    padding: 1.4rem 0;
+}
+.playlist {
+    list-style-type: none;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+.playlist-song {
+    display: flex;
+    padding: 0.78rem 1rem;
+    transition: 0.3s all ease;
+}
+.playlist-song:hover {
+    background: rgba(0,0,0, 0.3);
+}
+.playlist-song-active {
+    background: rgba(0,0,0, 0.3);
+    color: var(--light-green);
+}
+.playlist-song-active div {
+    color: inherit;
+}
+.play-pause {
+    color: var(--main-font-color);
+    margin-right: 20px;
+}
+.playlist-song-name {
+    color: var(--main-font-color);
+}
+.playlist-song-artist {
+    color: var(--secondary-font-color);
+}
+.playlist-song-duration {
+    margin-left: auto;
+    color: var(--secondary-font-color);
+}
+
+

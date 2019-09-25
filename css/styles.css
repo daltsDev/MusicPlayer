@@ -19,6 +19,15 @@ body {
     font-family: var(--main-font-stack);
     line-height: 1.5;
 }
+.notification {
+    margin: 0 auto;
+    text-align: center;
+}
+.notification__text {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #AAAAAA;
+}
 .button {
     padding: 1rem 3.8rem;
     border-radius: 3.4rem;
